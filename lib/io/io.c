@@ -1,5 +1,5 @@
 #include <avr/io.h>
-#inlcude "io.h"
+#include "io.h"
 #include "../../include/definitions.h"
 
 void io_init(void) {

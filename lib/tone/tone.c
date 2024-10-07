@@ -1,7 +1,7 @@
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include "tone.h"
-#include "definitions.h"
+#include "../../include/definitions.h"
 
 void play_tone(unsigned int frequency) {
     unsigned int ocr;
