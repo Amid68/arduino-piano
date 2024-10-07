@@ -17,28 +17,25 @@ int main(void) {
     timer0_init();
 
     while(1) {
-        uint8_t tone_played = 0;
+        uint8_t button_pressed_index = NUM_BUTTONS;  // No button is pressed initially
 
+        // Check if any button is pressed
         for (uint8_t i = 0; i < NUM_BUTTONS; i++) {
             if (button_pressed(i)) {
-                play_tone(frequencies[i]);
-                serial_print("Button on pin ");
-                serial_print_int(button_pins[i]);
-                serial_print(" pressed. Playing note ");
-                serial_println(note_names[i]);
-                tone_played = 1;
-                unsigned long start_time = millis();
-                
-                while (millis() - start_time < TONE_DURATION_MS) { 
-                    // wait for the tone duration
-                }
-
-                stop_tone();
+                button_pressed_index = i;  // Record the pressed button index
                 break;
             }
         }
 
-        if (!tone_played) {
+        // If a button is pressed, play the corresponding tone
+        if (button_pressed_index < NUM_BUTTONS) {
+            play_tone(frequencies[button_pressed_index]);
+            serial_print("Button on pin ");
+            serial_print_int(button_pins[button_pressed_index]);
+            serial_print(" pressed. Playing note ");
+            serial_println(note_names[button_pressed_index]);
+        } else {
+            // If no button is pressed, stop the tone
             stop_tone();
         }
 

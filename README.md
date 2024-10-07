@@ -80,7 +80,7 @@ This project allows users to generate specific musical tones by pressing buttons
 - **Features**:
   - Written in embedded C for finer control over the hardware.
   - Uses AVR-specific libraries for serial communication, tone generation, and button handling.
-  - **Note**: Currently, the tone generation has a minor issue where the sound is not continuous due to a small delay in the main loop. This will be fixed in future updates.
+
 
 ---
 
