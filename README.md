@@ -62,7 +62,7 @@ This project allows users to generate specific musical tones by pressing buttons
 
 ![Hardware Setup Diagram](setup.png)
 
-![Hardware Setup](setup2.png)
+![Hardware Setup](setup2.jpg)
 ---
 
 ## Project Versions
