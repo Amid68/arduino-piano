@@ -60,8 +60,9 @@ This project allows users to generate specific musical tones by pressing buttons
     └── main.c
 ```
 
-![Hardware Setup](setup.png)
+![Hardware Setup Diagram](setup.png)
 
+![Hardware Setup](setup2.png)
 ---
 
 ## Project Versions
